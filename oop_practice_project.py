@@ -21,6 +21,18 @@ class Student():
     def __str__(self):
         return f"Student:{self.name}, Average:{self.average():.2f}"
 
+
+@classmethod
+
+def get_count(cls):
+    return f"Total Students: {cls.student_count}"
+
+@staticmethod
+
+def is_valid_frade(grade):
+    return 0 <= grade <= 100
+
+
 s1 = Student("Raj", 20, [85, 90, 78])
 s2 = Student("Priya", 21, [92, 88, 95])
 
