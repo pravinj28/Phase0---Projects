@@ -22,15 +22,15 @@ class Student():
         return f"Student:{self.name}, Average:{self.average():.2f}"
 
 
-@classmethod
+    @classmethod
 
-def get_count(cls):
-    return f"Total Students: {cls.student_count}"
+    def get_count(cls):
+        return f"Total Students: {cls.student_count}"
 
-@staticmethod
+    @staticmethod
 
-def is_valid_frade(grade):
-    return 0 <= grade <= 100
+    def is_valid_frade(grade):
+        return 0 <= grade <= 100
 
 
 s1 = Student("Raj", 20, [85, 90, 78])
@@ -48,13 +48,14 @@ class GraduateStudent(Student):
         super().__init__(name, age, grade)
         self.thesis_topic = thesis_topic
 
-        def __str__(self):
-            return f"Graduate: {self.name}, Thesis: {self.thesis_topic}"
+    def __str__(self):
+        return f"Graduate: {self.name}, Thesis: {self.thesis_topic}"
 
 gs = GraduateStudent("Amit", 24, [88,89], "AI in Healthcare")
 print(gs)
 print(gs.average())
-print(gs.is_passing)
+print(gs.is_passing())
+print(Student.student_count)
 
 
 
